@@ -2,6 +2,7 @@ import { useLocation } from "wouter";
 import { motion } from "framer-motion";
 import GlassCard from "@/components/GlassCard";
 import { Button } from "@/components/ui/button";
+import FloatingSymbols from "@/components/FloatingSymbols";
 import chromeBg from "@assets/chrome-hearts-bg.png";
 
 export default function HomePage() {
@@ -19,6 +20,8 @@ export default function HomePage() {
       />
       
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/70 to-black/80" />
+      
+      <FloatingSymbols />
 
       <div className="relative z-10 min-h-screen flex items-center justify-center p-4">
         <motion.div
@@ -56,7 +59,7 @@ export default function HomePage() {
                 </h2>
                 
                 <p className="text-white/70 leading-relaxed">
-                  Sistema de verificación premium para Chrome Hearts Club
+                  Bienvenido a nuestra comunidad
                 </p>
               </motion.div>
 
@@ -71,7 +74,7 @@ export default function HomePage() {
                   className="w-full bg-gradient-to-r from-verified-purple to-verified-pink hover-elevate active-elevate-2 border-0 text-white font-semibold text-lg h-12 rounded-xl"
                   data-testid="button-demo"
                 >
-                  Ver Demo de Verificación
+                  Verificacion
                 </Button>
               </motion.div>
 
