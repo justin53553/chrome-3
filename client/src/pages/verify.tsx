@@ -67,11 +67,22 @@ export default function VerifyPage() {
               background: "linear-gradient(to right, #e0e0e0, #ffffff)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
-              textShadow: "0 0 30px rgba(255,255,255,0.3)",
+              filter: "drop-shadow(0 0 20px rgba(255,255,255,0.5)) drop-shadow(0 0 40px rgba(255,255,255,0.3))",
             }}
             initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
+            animate={{ 
+              opacity: 1, 
+              y: [0, -5, 0],
+            }}
+            transition={{ 
+              opacity: { delay: 0.2, duration: 0.6 },
+              y: { 
+                delay: 0.8,
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }
+            }}
             data-testid="text-title"
           >
             CHROME HEARTS
@@ -86,19 +97,47 @@ export default function VerifyPage() {
                 
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.5 }}
+                  animate={{ 
+                    opacity: 1, 
+                    y: [0, -3, 0]
+                  }}
+                  transition={{ 
+                    opacity: { delay: 0.5 },
+                    y: {
+                      delay: 1,
+                      duration: 2.5,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }
+                  }}
                   className="space-y-4"
                 >
-                  <h2 className="text-4xl font-bold text-white tracking-wide" data-testid="text-verified">
+                  <h2 
+                    className="text-4xl font-bold text-white tracking-wide" 
+                    data-testid="text-verified"
+                    style={{
+                      filter: "drop-shadow(0 0 15px rgba(255,255,255,0.6)) drop-shadow(0 0 30px rgba(255,255,255,0.4))",
+                    }}
+                  >
                     VERIFICADO
                   </h2>
                   
-                  <p className="text-xl text-white/80 font-medium" data-testid="text-welcome">
+                  <p 
+                    className="text-xl text-white/80 font-medium" 
+                    data-testid="text-welcome"
+                    style={{
+                      filter: "drop-shadow(0 0 10px rgba(255,255,255,0.3))",
+                    }}
+                  >
                     Bienvenido a Chrome Hearts
                   </p>
                   
-                  <p className="text-sm text-white/50 uppercase tracking-widest font-semibold">
+                  <p 
+                    className="text-sm text-white/50 uppercase tracking-widest font-semibold"
+                    style={{
+                      filter: "drop-shadow(0 0 8px rgba(255,255,255,0.2))",
+                    }}
+                  >
                     Discord Verified
                   </p>
                 </motion.div>
@@ -109,15 +148,30 @@ export default function VerifyPage() {
                   transition={{ delay: 0.8 }}
                   className="pt-6 w-full max-w-md"
                 >
-                  <p className="text-sm text-white/60 mb-4">
+                  <p 
+                    className="text-sm text-white/60 mb-4"
+                    style={{
+                      filter: "drop-shadow(0 0 5px rgba(255,255,255,0.2))",
+                    }}
+                  >
                     Redirigiendo en {countdown}s...
                   </p>
                   
                   <div className="space-y-2">
-                    <p className="text-xs text-white/40 uppercase tracking-wider font-semibold">
+                    <p 
+                      className="text-xs text-white/40 uppercase tracking-wider font-semibold"
+                      style={{
+                        filter: "drop-shadow(0 0 5px rgba(255,255,255,0.15))",
+                      }}
+                    >
                       CREATORS
                     </p>
-                    <div className="flex justify-center gap-6 text-sm text-white/70 font-medium">
+                    <div 
+                      className="flex justify-center gap-6 text-sm text-white/70 font-medium"
+                      style={{
+                        filter: "drop-shadow(0 0 8px rgba(255,255,255,0.25))",
+                      }}
+                    >
                       <span>ALMIRI</span>
                       <span>cookingwithLAJA</span>
                       <span>bighomie</span>
