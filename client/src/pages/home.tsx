@@ -83,13 +83,11 @@ export default function HomePage() {
               >
                 <div className="space-y-2">
                   <p className="text-xs text-white/40 uppercase tracking-wider font-semibold">
-                    Creators
+                    CREATORS
                   </p>
-                  <div className="flex justify-center gap-4 text-sm text-white/70 font-medium">
+                  <div className="flex justify-center gap-6 text-sm text-white/70 font-medium">
                     <span>ALMIRI</span>
-                    <span className="text-white/30">•</span>
                     <span>cookingwithLAJA</span>
-                    <span className="text-white/30">•</span>
                     <span>bighomie</span>
                   </div>
                 </div>
