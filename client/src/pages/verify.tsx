@@ -3,6 +3,7 @@ import { useRoute } from "wouter";
 import { motion } from "framer-motion";
 import SuccessCheckmark from "@/components/SuccessCheckmark";
 import LoadingSpinner from "@/components/LoadingSpinner";
+import FloatingSymbols from "@/components/FloatingSymbols";
 import chromeBg from "@assets/chrome-hearts-bg.png";
 
 type VerificationStatus = "loading" | "success" | "error";
@@ -53,6 +54,8 @@ export default function VerifyPage() {
       />
       
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/70 to-black/80" />
+      
+      <FloatingSymbols />
 
       <div className="relative z-10 min-h-screen flex items-center justify-center p-4">
         <motion.div
@@ -70,19 +73,8 @@ export default function VerifyPage() {
               filter: "drop-shadow(0 0 20px rgba(255,255,255,0.5)) drop-shadow(0 0 40px rgba(255,255,255,0.3))",
             }}
             initial={{ opacity: 0, y: -20 }}
-            animate={{ 
-              opacity: 1, 
-              y: [0, -5, 0],
-            }}
-            transition={{ 
-              opacity: { delay: 0.2, duration: 0.6 },
-              y: { 
-                delay: 0.8,
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }
-            }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
             data-testid="text-title"
           >
             CHROME HEARTS
@@ -97,19 +89,8 @@ export default function VerifyPage() {
                 
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
-                  animate={{ 
-                    opacity: 1, 
-                    y: [0, -3, 0]
-                  }}
-                  transition={{ 
-                    opacity: { delay: 0.5 },
-                    y: {
-                      delay: 1,
-                      duration: 2.5,
-                      repeat: Infinity,
-                      ease: "easeInOut"
-                    }
-                  }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5 }}
                   className="space-y-4"
                 >
                   <h2 
